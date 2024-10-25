@@ -5,15 +5,17 @@ plugins {
 group 'sh.fyz'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+compileJava.options.encoding = 'UTF-8'
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-}
-
-test {
-    useJUnitPlatform()
+    implementation 'org.mnode.ical4j:ical4j:4.0.4'
+    implementation 'net.dv8tion:JDA:5.1.2'
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'com.google.guava:guava:33.3.1-jre'
 }
